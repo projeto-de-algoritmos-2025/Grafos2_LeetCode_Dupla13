@@ -18,10 +18,10 @@ As seções abaixo informam a dificuldade de cada questão, linguagens utilizada
 ## Exercícios
 | Nome | Dificuldade |
 | -- | -- |
-| [999. nome da questão 1](https://leetcode.com/problems/---/description/)  |  Média |
-| [999. nome da questão 2](https://leetcode.com/problems/---/description/)  |  Média |
+| [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/)  |  Média |
+| [1786. nome da questão 2](https://leetcode.com/problems/---/description/)  |  Média |
 | [999. nome da questão 3](https://leetcode.com/problems/---/description/)  |  Difícil |
-| [999. nome da questão 4](https://leetcode.com/problems/---/description/)  |  Difícil |
+| [1568. Minimum Number of Days to Disconnect Island](https://leetcode.com/problems/minimum-number-of-days-to-disconnect-island/description/)  |  Difícil |
 
 ## Screenshots
 [Adicione 3 ou mais screenshots do projeto em funcionamento.]: #
@@ -31,8 +31,8 @@ As seções abaixo informam a dificuldade de cada questão, linguagens utilizada
 ![Print do exercício xxx](screenshots/---.png)
 ### Exercício 999. Nome 3 (Difícil) 
 ![Print do exercício xxx](screenshots/---.png)
-### Exercício 999. Nome 4 (Difícil)
-![Print do exercício xxx](screenshots/---.png)
+### Exercício 1568. Minimum Number of Days to Disconnect Island (Difícil)
+![Print do exercício 1568](screenshots/minimum-number-of-days.png)
 
 ## Linguagens 
 [**Linguagem**: xxxxxx<br>]: #
@@ -43,4 +43,4 @@ JavaScript e Python
 ## Vídeo
 [Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.]: #
 
-[▶️ Ver vídeo](link)
+[Vídeo de explicação das soluções de cada exercício](link)
