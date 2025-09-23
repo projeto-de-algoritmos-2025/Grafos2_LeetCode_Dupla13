@@ -27,7 +27,9 @@ As seções abaixo informam a dificuldade de cada questão, linguagens utilizada
 ### Exercício 1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance (Média)
 ![Print do exercício 1334](screenshots/find-the-city.png)
 ### Exercício 1786. Number of Restricted Paths From First to Last Node (Média) 
-![Print do exercício xxx](screenshots/---.png)
+![Print 1 do exercício 1786](screenshots/1786.png)
+![Print 2 do exercício 1786](screenshots/1786_1.png)
+![Print 3 do exercício 1786](screenshots/1786_2.png)
 ### Exercício 1568. Minimum Number of Days to Disconnect Island (Difícil)
 ![Print do exercício 1568](screenshots/minimum-number-of-days.png)
 
