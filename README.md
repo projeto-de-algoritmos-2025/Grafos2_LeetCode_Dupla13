@@ -11,7 +11,7 @@
 
 ## Sobre 
 [Descreva os objetivos do seu projeto e como ele funciona. ]: #
-O trabalho realizado pela dupla 13 no módulo de grafos 2 consiste na resolução de quatro exercícios, sendo eles de dificuldade média ou difícil.
+O trabalho realizado pela dupla 13 no módulo de grafos 2 consiste na resolução de três exercícios, sendo eles de dificuldade média ou difícil.
 
 As seções abaixo informam a dificuldade de cada questão, linguagens utilizadas e os seus respectivos prints para confirmação da submissão.
 
