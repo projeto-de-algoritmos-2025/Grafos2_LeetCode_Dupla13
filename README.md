@@ -42,4 +42,4 @@ JavaScript e Python
 ## Vídeo
 [Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.]: #
 
-[Vídeo de explicação das soluções de cada exercício](link)
+[Vídeo de explicação das soluções de cada exercício](https://youtu.be/M6vjN4qMzwI)
