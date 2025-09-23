@@ -1,11 +1,35 @@
-/**
- * @param {number} n
- * @param {number[][]} edges
- * @param {number} distanceThreshold
- * @return {number}
- */
-let findTheCity = (n, edges, distanceThreshold) => {   
+let findTheCity = (n, edges, distanceThreshold) => {
 
+    // Montagem do grafo
+    let graph = new Graph(n);
+    for (let [u, v, w] of edges) {
+        graph.addEdge(u, v, w);
+    }
+
+    // Inicialização de elementos no grafo
+    let resultCity = -1;
+    let minReachable = Infinity;
+
+    // Percurso do Dijkstra em cada cidade
+    for (let i = 0; i < n; i++) {
+        let dist = dijkstra(graph, i);
+
+        // Contar quantas cidades são alcançáveis
+        let reachable = 0;
+        for (let j = 0; j < n; j++) {
+            if (i !== j && dist[j] <= distanceThreshold) {
+                reachable++;
+            }
+        }
+
+        // Escolher cidade segundo as regras
+        if (reachable <= minReachable) {
+            minReachable = reachable;
+            resultCity = i; 
+        }
+    }
+
+    return resultCity;
 };
 
 // estrutura do grafo
@@ -17,21 +41,45 @@ class Graph {
         this.adj = Array.from({ length: V }, () => []);
     }
 
-    // adicionar aresta dirigida
-    addEdge(v, w) {
-        this.adj[v].push(w);
-        this.adj[w].push(v);
+    // adicionar aresta não-dirigida
+    addEdge(v, w, peso) {
+        this.adj[v].push([w, peso]);
+        this.adj[w].push([v, peso]); 
     }
 }
 
 // Algoritmo de Djikstra com heap
-let dijkstra = () => {
-    /*Maintain a set of explored nodes S for which we have determined
-    the shortest path distance d(u) from s to u.
-    Initialize S = { s }, d(s) = 0.
-    Repeatedly choose unexplored node v which minimizes
-    add v to S, and set d(v) = (v).*/
-} 
+let dijkstra = (graph, s) => {
+
+    // Declaração e atribuição de valores
+    const V = graph.V;
+    const dist = Array(V).fill(Infinity);
+    const visited = Array(V).fill(false);
+
+    dist[s] = 0;
+    PQinit(V);
+    PQinsert(s, dist);
+
+    while (!PQempty()) {
+
+        let u = PQdelmin(dist);
+
+        if (visited[u]) {
+            continue;
+        } 
+        visited[u] = true;
+
+        // Relaxa as arestas de u
+        for (let [v, w] of graph.adj[u]) {
+            if (dist[v] > dist[u] + w) {
+                dist[v] = dist[u] + w;
+                PQinsert(v, dist); 
+            }
+        }
+    }
+
+    return dist;
+}
 
 // Operações da fila de prioridades 
 
@@ -45,45 +93,44 @@ let PQinit = (maxN) => {
     n = 0;
 }
 
-// Verificar se a fila estiver vazia 
+// Tá vazio?
 let PQempty = () => {
     return n === 0;
 }
 
-// Mudança de índice na fila
+// Troca de posições
 let exch = (i, j) => {
     [pq[i], pq[j]] = [pq[j], pq[i]];
 }
 
-// Insere na fila
+// Inserção 
 let PQinsert = (v, dist) => {
     pq[++n] = v;
-    fixUp(n, dist);
+    shiftUp(n, dist);
 }
 
-// Heapify
+// Remoção 
 let PQdelmin = (dist) => {
     exch(1, n);
-    fixDown(1, n - 1, dist);
+    heapify(1, n - 1, dist);
     return pq[n--];
 }
 
-// Shift-up
-let fixUp = (k, dist) => {
+// Shift-up 
+let shiftUp = (k, dist) => {
     while (k > 1 && dist[pq[Math.floor(k / 2)]] > dist[pq[k]]) {
         exch(k, Math.floor(k / 2));
         k = Math.floor(k / 2);
     }
 }
 
-// Shift-down
-let fixDown = (k, m, dist) => {
+// Heapify 
+let heapify = (k, m, dist) => {
     while (2 * k <= m) {
         let j = 2 * k;
         if (j < m && dist[pq[j]] > dist[pq[j + 1]]) j++;
-        if (dist[pq[k]] > dist[pq[j]]) break;
+        if (dist[pq[k]] <= dist[pq[j]]) break;
         exch(k, j);
         k = j;
     }
 }
-

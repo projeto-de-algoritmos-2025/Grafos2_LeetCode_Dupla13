@@ -19,17 +19,14 @@ As seções abaixo informam a dificuldade de cada questão, linguagens utilizada
 | Nome | Dificuldade |
 | -- | -- |
 | [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/)  |  Média |
-| [1786. nome da questão 2](https://leetcode.com/problems/---/description/)  |  Média |
-| [999. nome da questão 3](https://leetcode.com/problems/---/description/)  |  Difícil |
+| [1786. Number of Restricted Paths From First to Last Node](https://leetcode.com/problems/number-of-restricted-paths-from-first-to-last-node/description/)  |  Média |
 | [1568. Minimum Number of Days to Disconnect Island](https://leetcode.com/problems/minimum-number-of-days-to-disconnect-island/description/)  |  Difícil |
 
 ## Screenshots
 [Adicione 3 ou mais screenshots do projeto em funcionamento.]: #
-### Exercício 999. Nome 1 (Média)
-![Print do exercício xxx](screenshots/---.png)
-### Exercício 999. Nome 2 (Média) 
-![Print do exercício xxx](screenshots/---.png)
-### Exercício 999. Nome 3 (Difícil) 
+### Exercício 1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance (Média)
+![Print do exercício 1334](screenshots/find-the-city.png)
+### Exercício 1786. Number of Restricted Paths From First to Last Node (Média) 
 ![Print do exercício xxx](screenshots/---.png)
 ### Exercício 1568. Minimum Number of Days to Disconnect Island (Difícil)
 ![Print do exercício 1568](screenshots/minimum-number-of-days.png)
